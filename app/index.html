@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Guide — GTA 6 Trophy Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies: cited steps, platinum roadmap, missables and a source matrix.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c2274b'/%3E%3Ctext x='16' y='22' font-size='15' text-anchor='middle' fill='white' font-family='Georgia'%3ELP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">LP</span>
+    <div>
+      <h1>Leonida Platinum Guide</h1>
+      <p class="subtitle">GTA VI trophy tracker &middot; 55 trophies &middot; 1 playthrough &middot; 0 online &middot; ~200 h &middot; difficulty 4/10</p>
+    </div>
+  </div>
+  <div class="progress" id="progressBox" aria-live="polite">
+    <div class="progress-count"><strong id="earnedCount">0/55</strong> earned</div>
+    <div class="progress-bar"><span id="earnedBar" style="width:0%"></span></div>
+    <div class="progress-grades" id="gradeCounts">P 0/1 &middot; G 0/2 &middot; S 0/6 &middot; B 0/46</div>
+  </div>
+  <div class="top-actions">
+    <label class="spoiler-toggle"><input type="checkbox" id="spoilerToggle"> <span>Spoiler shield</span></label>
+    <button id="exportBtn" type="button">Export</button>
+    <button id="importBtn" type="button">Import</button>
+    <input type="file" id="importFile" accept="application/json,.json" hidden>
+    <button id="shareBtn" type="button">Share link</button>
+    <span class="saved-note" id="savedNote">&#10003; Saved in this browser</span>
+  </div>
+</header>
+
+<section class="audit" id="auditStrip" aria-label="Audit strip">Loading audit&hellip;</section>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" data-view="tracker" class="tab active" id="tab-tracker">Tracker</button>
+  <button type="button" data-view="roadmap" class="tab" id="tab-roadmap">Roadmap</button>
+  <button type="button" data-view="missables" class="tab" id="tab-missables">Missables <span class="tab-badge" id="missableBadge">9</span></button>
+  <button type="button" data-view="sources" class="tab" id="tab-sources">Sources</button>
+</nav>
+
+<section class="toolbar" id="toolbar">
+  <input type="search" id="searchInput" placeholder="Search a trophy, mission or place&hellip;" aria-label="Search trophies">
+  <div class="chips" id="kindChips" role="group" aria-label="Filter by kind"></div>
+  <label class="grade-filter">Grade
+    <select id="gradeSelect">
+      <option value="">All grades</option>
+      <option value="Platinum">Platinum</option>
+      <option value="Gold">Gold</option>
+      <option value="Silver">Silver</option>
+      <option value="Bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="sort-filter">Sort
+    <select id="sortSelect">
+      <option value="roadmap">Roadmap order</option>
+      <option value="name">Name A&ndash;Z</option>
+      <option value="difficulty">Difficulty</option>
+      <option value="grade">Grade</option>
+    </select>
+  </label>
+</section>
+
+<main class="layout">
+  <section class="col-list" id="listCol" aria-label="Trophy list">
+    <div class="nextup" id="nextUp"></div>
+    <ol class="trophy-list" id="trophyList"></ol>
+  </section>
+  <section class="col-detail" id="detailCol" aria-label="Trophy guide"></section>
+  <aside class="col-rail" id="railCol" aria-label="Sources for this guide"></aside>
+</main>
+
+<main class="page" id="pageCol" hidden></main>
+
+<footer class="foot">
+  <p>Leonida Platinum Guide v3 &middot; an unofficial fan guide. Grand Theft Auto and GTA are trademarks of Rockstar Games; this guide uses no Rockstar logo, artwork or screenshots. Trophy names and descriptions are shown as PlayStation publishes them; every guide step is written in our own words and cites its source. All data is read on 20 Nov 2026 from the sources listed on the Sources tab. Works fully offline.</p>
+  <p><a href="https://make.fun/bounty/gta6-trophy-guide-01">make.fun bounty: gta6-trophy-guide-01</a></p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+:root{
+  --paper:#f6f1e7; --card:#fffdf7; --ink:#1d2129; --muted:#626a75;
+  --line:#ddd3bd; --accent:#c2274b; --accent-soft:#fbe9ec; --gold:#b8860b;
+  --silver:#6b7280; --bronze:#9a6b3f; --platinum:#5b7a99;
+  --good:#2e7d32; --warn:#b45309; --bad:#b91c1c; --chip:#efe8d6;
+}
+*{box-sizing:border-box}
+html{font-size:15px}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Iowan Old Style",Palatino,Georgia,"Times New Roman",serif;
+  line-height:1.45}
+body,input,select,button{font-family:inherit}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;margin:0}
+a{color:var(--accent)}
+button{cursor:pointer}
+.topbar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+  padding:12px 18px;background:var(--card);border-bottom:3px solid var(--accent)}
+.brand{display:flex;gap:10px;align-items:center;min-width:280px}
+.brand-mark{display:inline-flex;width:44px;height:44px;border-radius:8px;
+  background:var(--accent);color:#fff;align-items:center;justify-content:center;
+  font-weight:700;font-size:20px;font-family:Georgia,serif}
+.brand h1{font-size:24px;letter-spacing:.2px}
+.subtitle{margin:2px 0 0;color:var(--muted);font-size:13px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.progress{min-width:220px;flex:1}
+.progress-count{font-size:18px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.progress-bar{height:10px;background:#e7dfc9;border-radius:6px;overflow:hidden;margin:4px 0}
+.progress-bar span{display:block;height:100%;background:var(--accent)}
+.progress-grades{font-size:13px;color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.top-actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px}
+.top-actions button{border:1px solid var(--line);background:#fff;border-radius:6px;
+  padding:6px 10px;font-size:13px}
+.top-actions button:hover{border-color:var(--accent)}
+.spoiler-toggle{display:flex;gap:5px;align-items:center}
+.saved-note{color:var(--good);font-size:12px}
+.audit{padding:8px 18px;background:#2b2118;color:#f3e9d2;font-size:13px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;border-bottom:1px solid #000}
+.audit b{color:#ffd166}
+.tabs{display:flex;gap:4px;padding:8px 18px 0;background:var(--paper)}
+.tab{border:1px solid var(--line);border-bottom:none;background:var(--chip);
+  padding:8px 16px;border-radius:8px 8px 0 0;font-size:14px;font-weight:600}
+.tab.active{background:var(--card);color:var(--accent);border-top:3px solid var(--accent)}
+.tab-badge{background:var(--accent);color:#fff;border-radius:10px;
+  padding:0 7px;font-size:12px;margin-left:4px}
+.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  padding:10px 18px;background:var(--card);border-bottom:1px solid var(--line)}
+.toolbar input[type=search]{flex:1;min-width:200px;padding:8px 10px;
+  border:1px solid var(--line);border-radius:6px;font-size:14px;background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:20px;
+  padding:4px 11px;font-size:13px;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.chip.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.grade-filter,.sort-filter{font-size:13px;color:var(--muted);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.grade-filter select,.sort-filter select{padding:6px;border:1px solid var(--line);
+  border-radius:6px;background:#fff;font-size:13px}
+.layout{display:grid;grid-template-columns:minmax(300px,380px) minmax(420px,1fr) 280px;
+  gap:14px;padding:14px 18px;align-items:start}
+.page{padding:14px 18px;max-width:1100px}
+.col-list,.col-detail,.col-rail{background:var(--card);border:1px solid var(--line);
+  border-radius:10px;padding:12px}
+.nextup{border:1px solid var(--accent);background:var(--accent-soft);
+  border-radius:8px;padding:10px;margin-bottom:10px}
+.nextup h2{font-size:14px;color:var(--accent);text-transform:uppercase;letter-spacing:.5px}
+.nextup ol{margin:6px 0 0;padding-left:20px;font-size:14px}
+.nextup li{margin:3px 0}
+.trophy-list{list-style:none;margin:0;padding:0}
+.trophy-item{border:1px solid var(--line);border-radius:8px;padding:9px 10px;
+  margin-bottom:8px;background:#fff}
+.trophy-item.selected{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.trophy-item.earned{opacity:.75}
+.trophy-item.earned .t-name{text-decoration:line-through}
+.trophy-head{display:flex;gap:8px;align-items:flex-start}
+.trophy-check{flex:none;width:20px;height:20px;margin-top:1px;accent-color:var(--accent)}
+.t-name{font-weight:700;font-size:15px}
+.t-desc{color:var(--muted);font-size:13px;margin:2px 0 4px}
+.t-meta{display:flex;flex-wrap:wrap;gap:5px;font-size:12px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.grade{font-weight:700;border-radius:4px;padding:1px 6px;color:#fff}
+.grade.Platinum{background:var(--platinum)}
+.grade.Gold{background:var(--gold)}
+.grade.Silver{background:var(--silver)}
+.grade.Bronze{background:var(--bronze)}
+.tag{border:1px solid var(--line);border-radius:4px;padding:1px 6px;background:var(--chip)}
+.tag.miss{border-color:var(--bad);color:var(--bad);font-weight:700}
+.tag.watch{border-color:var(--warn);color:var(--warn);font-weight:700}
+.tag.hidden-tag{border-color:#555;color:#555}
+.tag.disputed{border-color:#6d28d9;color:#6d28d9}
+.tag.unconf{border-color:var(--bad);color:var(--bad)}
+.t-mini{color:var(--muted);font-size:12px;margin-top:4px}
+.detail h2{font-size:22px;margin-bottom:2px}
+.detail .official{color:var(--muted);font-size:14px;font-style:italic}
+.detail .facts{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px}
+.detail .facts span{border:1px solid var(--line);border-radius:6px;padding:3px 8px;background:var(--chip)}
+.detail .guide-text{font-size:15px;margin:8px 0}
+.detail h3{font-size:15px;margin:14px 0 6px;text-transform:uppercase;
+  letter-spacing:.5px;color:var(--accent)}
+.steps{margin:0;padding-left:22px}
+.steps li{margin:6px 0;font-size:14px}
+.cite{color:var(--accent);font-weight:700;font-size:12px;white-space:nowrap}
+.warn-box{border:2px solid var(--bad);background:#fdf0f0;border-radius:8px;
+  padding:10px;margin:10px 0}
+.warn-box.watch{border-color:var(--warn);background:#fdf6e3}
+.warn-box h3{color:var(--bad);margin:0 0 4px}
+.warn-box.watch h3{color:var(--warn)}
+.dispute-box{border:2px solid #6d28d9;background:#f5f0fd;border-radius:8px;
+  padding:10px;margin:10px 0}
+.dispute-box h3{color:#6d28d9;margin:0 0 4px}
+.dispute-box p{margin:5px 0;font-size:14px}
+.counter-box{display:flex;gap:10px;align-items:center;border:1px solid var(--line);
+  border-radius:8px;padding:10px;margin:10px 0;background:var(--chip)}
+.counter-box button{width:34px;height:34px;font-size:20px;border-radius:6px;
+  border:1px solid var(--line);background:#fff}
+.counter-box .count-num{font-size:20px;font-weight:700;min-width:90px;text-align:center}
+.earn-btn{margin-top:10px;padding:9px 16px;border-radius:8px;border:none;
+  background:var(--accent);color:#fff;font-size:15px;font-weight:700}
+.earn-btn.earned{background:var(--good)}
+.rail h2{font-size:13px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.rail ul{list-style:none;margin:8px 0 0;padding:0}
+.rail li{margin:0 0 10px;font-size:13px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.rail .src-site{font-weight:700}
+.rail .src-count{color:var(--muted);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:12px}
+.stage{border:1px solid var(--line);border-radius:10px;background:var(--card);
+  padding:14px;margin-bottom:14px}
+.stage h2{font-size:19px}
+.stage .stage-meta{color:var(--muted);font-size:13px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;margin:3px 0 8px}
+.stage ol{margin:6px 0;padding-left:22px}
+.stage li{margin:5px 0}
+.stage .stage-trophies{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.stage .stage-trophies span{font-size:12px;border:1px solid var(--line);
+  border-radius:12px;padding:2px 9px;background:#fff;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.stage .stage-trophies span.done{background:#e2efdd;text-decoration:line-through}
+.miss-card{border:1px solid var(--line);border-radius:10px;background:var(--card);
+  padding:14px;margin-bottom:12px}
+.miss-card.possible{border:2px solid var(--bad)}
+.miss-card h2{font-size:18px}
+.miss-card .last-chance{font-weight:700;color:var(--bad);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px}
+.src-table{width:100%;border-collapse:collapse;background:var(--card);
+  font-size:14px}
+.src-table th,.src-table td{border:1px solid var(--line);padding:8px;text-align:left}
+.src-table th{background:var(--chip);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:13px}
+.matrix-note{color:var(--muted);font-size:13px;margin:10px 0}
+.empty{padding:30px;text-align:center;color:var(--muted)}
+.foot{padding:16px 18px;color:var(--muted);font-size:12px;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;border-top:1px solid var(--line)}
+@media (max-width:1100px){
+  .layout{grid-template-columns:minmax(280px,1fr) minmax(360px,1.4fr)}
+  .col-rail{grid-column:1 / -1}
+}
+@media (max-width:760px){
+  .layout{grid-template-columns:1fr}
+}
